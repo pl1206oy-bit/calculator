@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>calculator</title>
+    <style>
+        body{
+            background-image: linear-gradient(to right, #434345, #c2c8a7);
+        }
+        .calculator{
+            position: absolute;
+            top: 19%;
+            bottom: 0%;
+            left: 35%;
+            right: 0;
+            width: 400px;
+            height: 420px;
+            background-image: linear-gradient(to right top, #3b3c3d, #3c3f40, #414242, #444544, #484847);
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 2px 2px 2px 2px #6f7274;
+        }
+
+        .screen{
+            padding: 10px;
+            width: 93.6%;
+            box-sizing: border-box;
+            height: 65px;
+            font-size: 35px;
+            font-weight: bold;
+            border-radius: 2px;
+            border: none;
+            background-color: #c6ccaa;
+            margin-bottom: 10px;
+            box-shadow: 2px 2px 2px 2px #2f2e2e inset;
+            margin: 10px;
+        }
+        
+        .col-one{
+            width: 75%;
+            float: left;
+        }
+
+        input[type=button]{
+            width: 80px;
+            height: 50px;
+            font-size: 26px;
+            font-weight: bold;
+            margin: 8px;
+            box-shadow: 3px 2px 5px 2px #272727;
+            border-radius: 2px;
+            border: none;
+            color: #414242;
+            background-color: #dedede;
+        }
+        
+        .screen:focus{
+            outline: none;
+
+        }
+
+        .plus{
+            height: 120px!important;
+            background-color: #f1522b!important;
+            color: white!important;
+        }
+
+        .zero{
+            width: 180px!important;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="calculator">
+        <form name="c">
+            <Input type="text" name="screen" class="screen">
+            <div class="col-one">
+                <input type="button" value="7" onclick="c.screen.value+='7'">
+                <input type="button" value="8" onclick="c.screen.value+='8'">
+                <input type="button" value="9" onclick="c.screen.value+='9'">
+                <input type="button" value="4" onclick="c.screen.value+='4'">
+                <input type="button" value="5" onclick="c.screen.value+='5'">
+                <input type="button" value="6" onclick="c.screen.value+='6'">
+                <input type="button" value="1" onclick="c.screen.value+='1'">
+                <input type="button" value="2" onclick="c.screen.value+='2'">
+                <input type="button" value="3" onclick="c.screen.value+='3'">
+                <input type="button" value="/" onclick="c.screen.value+='/'">
+                <input type="button" value="X" onclick="c.screen.value+='*'">
+                <input type="button" value="C" onclick="c.screen.value=''">
+
+            </div> 
+
+            <div class="col-two">
+                <input type="button" value="." onclick="c.screen.value+='.'">
+                <input type="button" value="-" onclick="c.screen.value+='-'">
+                <input type="button" value="+" class="plus" onclick="c.screen.value+='+'">
+                <input type="button" value="0" class="zero" onclick="c.screen.value+='0'">
+                <input type="button" value="%" onclick="c.screen.value+='%'">
+                <input type="button" value="=" onclick="c.screen.value=eval(c.screen.value)">
+                </div>
+                
+                   </form>
+    </div>
+</body>
+</html>
